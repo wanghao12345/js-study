@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+    <script>
+        /**
+         * 形参：变量名
+         * 实参：实际参数
+         * 不定参：实参的集合（传入的实参有多少个，不定参（arguments）就有多少个）
+         */
+
+        function goudan(a, b, c) { //a,b,c : 形参
+            //不定参 - 实参的集合
+            console.log(arguments);
+            var sum = 0;
+            for (var i=0, length = arguments.length; i < length; i++) {
+                sum += arguments[i];
+            }
+
+            alert(sum);
+
+        }
+
+
+        goudan(1, 2, 3); //1,2,3: 实参
+        goudan(1, 2, 3, 4); //1,2,3: 实参
+        goudan(1, 2, 3, 4, 5); //1,2,3: 实参
+
+
+    </script>
+</body>
+</html>

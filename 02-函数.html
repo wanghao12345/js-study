@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        /**
+         * 关于函数两种不同的定义方式
+         */
+        //a(); //不可以调用
+        b(); //可以调用
+
+        /**
+         * 1.必须放在函数定义后面调用
+         */
+        var a = function () {
+            alert('A');
+        };
+
+
+        /**
+         * 2.可在函数定义前面或后面调用
+         */
+        function b() {
+            alert('B');
+        }
+
+
+    </script>
+
+</body>
+</html>
