@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /**
+         * 代码解析顺序
+         *    1.定义
+         *        查找当前作用域所有的 var function (变量提升)
+         *    2.执行
+         *
+         */
+        alert(a);
+        b();
+        var a = 10;
+        function b() {
+            alert(2);
+        }
+
+        /**
+         * 1.定义
+         *    var a;
+         *    function b(){alert(2)};
+         *
+         * 2.执行
+         *  alert(a);
+         *  b();
+         *  a = 10;
+         */
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /**
+         * return
+         *
+         *    函数运行完之后，相当于一个什么数据
+         *    函数默认返回 undefined
+         */
+        // function goudan() {
+        //
+        //     alert(1);
+        //     alert(2);
+        //     alert(3);
+        //
+        //     return `返回值`;
+        // }
+        // var x = goudan();
+        // alert(x);
+
+
+        /**
+         * 1.递归
+         * 4! = 4 * 3 * 2 * 1
+         */
+
+        // function fn(num) {
+        //     if(num === 1){
+        //         return 1;
+        //     }else{
+        //         return fn(num - 1) * num;
+        //     }
+        // }
+        // alert(fn(5));
+
+        /**
+         * 2.返回函数
+         */
+        function fn() {
+            alert('函数执行了！');
+            return function () {
+                alert('返回函数执行了！');
+            }
+        }
+        fn()();
+
+
+    </script>
+</body>
+</html>

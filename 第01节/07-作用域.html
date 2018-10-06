@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        /**
+         * ES5作用域
+         *
+         *  script:全局
+         *  函数：局部
+         *
+         *  说明：当我们需要使用一个变量的时候，先从自身的作用域开始查找，如果找不到，
+         *       往上一层作用域一直查找，如果最后还是没有找到，就会报错
+         */
+
+        var a = 10;
+
+        function b() {
+            var g = 20;
+            alert(a);
+            function c() {
+
+                alert(a);
+            }
+            c();
+            a = 20;
+        }
+        b();
+
+
+    </script>
+</body>
+</html>
