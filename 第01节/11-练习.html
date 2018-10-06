@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        /**
+         * 定义过程中： var和function重名的话，留下function
+         *            function和function重名的话，留下最后一个function
+         *            var和var重名的话，留下最后一个var
+         */
+        function a() {
+            alert(1);
+        }
+        var a;
+        alert(a); // function a() {alert(1)}
+
+
+
+    </script>
+</body>
+</html>
