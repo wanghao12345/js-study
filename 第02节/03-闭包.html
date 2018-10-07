@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /**
+         * 闭包：
+         *      1.函数里面嵌套函数
+         *      2.内部函数引用了外部函数的参数或者变量
+         *      3.内部函数对外有持续的引用
+         */
+
+        function a() {
+            var gg = 5;
+            function b() { // 1
+                gg++; // 2
+            }
+
+            return b; // 3
+        }
+
+        a();
+
+
+    </script>
+</body>
+</html>
