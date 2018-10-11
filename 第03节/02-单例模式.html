@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 提示框类
+
+        // 不是单例
+
+        // class Tip {
+        //     constructor(text){
+        //         this.oDiv = document.createElement('div');
+        //         this.oDiv.style.cssText = "position: fixed;" +
+        //                              "right: 0; " +
+        //                              "bottom: 0;" +
+        //                              "width: 200px;" +
+        //                              "height: 100px;" +
+        //                              "border: 1px solid #666";
+        //         this.oDiv.innerText = text;
+        //         document.body.appendChild(this.oDiv);
+        //     }
+        //
+        //     show () {
+        //
+        //     }
+        // }
+        // //实例
+        // new Tip("阿飞！");
+
+        // 单例
+        let Tip = (function () {
+
+            let ins = null;
+            class Fn {
+                constructor (text) {
+                    if( ins ) {
+                        ins.oDiv.innerText = text;
+                        return ins;
+                    }else{
+                        this.oDiv = document.createElement('div');
+                        this.oDiv.style.cssText = "position: fixed;" +
+                            "right: 0; " +
+                            "bottom: 0;" +
+                            "width: 200px;" +
+                            "height: 100px;" +
+                            "border: 1px solid #666";
+                        this.oDiv.innerText = text;
+                        document.body.appendChild(this.oDiv);
+                        ins = this;
+                    }
+                }
+            }
+            return Fn;
+        })();
+
+        new Tip('小王');
+        new Tip('小明');
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

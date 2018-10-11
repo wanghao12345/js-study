@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let single = (function(){
+        let ins = null;
+
+        return class {
+
+            constructor () {
+                if( ins ){ // 已经存在
+                    return ins;
+                }else{
+                    //添加属性等等
+                    ins = this;
+                }
+            }
+        }
+
+    })();
+
+
+    console.log(new single() === new single()) // true
+
+</script>
+
+
+
+</body>
+</html>

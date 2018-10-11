@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        let Shop = (function () {
+
+            //牛排类
+            class Sreak {
+                constructor () {
+                    this.price = 40;
+                }
+            }
+
+            //烧烤类
+            class Grill {
+                constructor () {
+                    this.price = 20;
+                }
+            }
+
+            //面条
+            class Noodles {
+                constructor () {
+                    this.price = 30;
+                }
+            }
+
+            return function(n) {
+                var o = null;
+                switch (n) {
+                    case "Steak":
+                        o = new Steak();
+                        break;
+                    case "Noodles":
+                        o = new Noodles();
+                        break;
+                    case "Grill":
+                        o = new Grill();
+                        break;
+                }
+                return o;
+            }
+        })();
+
+        let a = new Shop("Steak");
+        let b = new Shop("Noodles");
+        let c = new Shop("Grill");
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
