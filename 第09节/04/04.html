@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>数据双向绑定</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="message">
+    <ul><li></li></ul>
+    {{message}}
+  </div>
+  <script src="./watcher.js"></script>
+  <script src="./observer.js"></script>
+  <script src="./compile.js"></script>
+  <script src="./mvvm.js"></script>
+  <script>
+    let vm = new MVVM({
+      el: '#app',
+      data: {
+        message: 'hello zfpx',
+        a: {
+          b: {
+            c: 1
+          }
+        }
+      }
+    })
+
+
+
+
+  </script>
+</body>
+</html>
