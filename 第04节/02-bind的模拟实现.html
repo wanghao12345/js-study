@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>css handsome</div>
+</body>
+<script>
+    // var list = {
+    //     init: function () {
+    //         this.message = 'hello';
+    //         this.bindEvent();
+    //     },
+    //     bindEvent: function () {
+    //         var oDiv = document.getElementsByTagName('div')[0];
+    //         oDiv.onclick = this.show.bind(this);
+    //     },
+    //     show: function (e) {
+    //         console.log(e.target, this);
+    //     }
+    // }
+    // list.init();
+
+
+    var value = 0;
+    var obj = {
+        value: 1
+    };
+    function show(name, age) {
+        console.log(this.value);
+        console.log(name, age);
+    }
+    show('cst', 18);  // 0; cst 18
+
+
+</script>
+
+
+
+</html>
